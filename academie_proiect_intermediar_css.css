@@ -31,7 +31,11 @@ body {
 .logo_bean {
     width: 80px;
     animation: rotation 2s infinite linear;
-   display:inline-block;
+   position:fixed;
+   top:35%;
+   left:35%;
+   transform: translate(-35%, -35%);
+
 }
 @keyframes rotation {
     from {
@@ -52,13 +56,15 @@ button {
     font-size: 15px;
     font-family: inherit;
     border: none;
-    position:relative;
-    top:8rem;
-    left:19rem;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;                            /*index pentru butonul cu meniu ca sa nu mai apara peste navbar (fata de celelalte care au 1*/
     box-shadow: 6px 6px 12px #908b8b,
                 -6px -6px 12px #f2cd8c;
+    
    
 
 }
@@ -73,7 +79,7 @@ button::before {
     background-image: linear-gradient(to right, #53f8d7 0%, #f9de47 100%);
     transition: .5s ease;
     display: block;
-    z-index: -1;
+    z-index: -1; 
    }
 button:hover::before {
     width: 9em;
@@ -87,6 +93,7 @@ button:hover::before {
     box-sizing: border-box;
     font-family:"Caveat";
     font-family:cursive;
+
   }
   .wrapper{
     position: fixed;
@@ -96,16 +103,17 @@ button:hover::before {
     width: 100%;
     background:linear-gradient(#ffb66d, #ff977a);
     transition: all 0.6s ease-in-out;
+    z-index: 1;     /*aici stergi*/
   }
   #active:checked ~ .wrapper{
     right:0;
   }
-  .menu-btn{
+  .menu-btn{              
     position: absolute;
-    z-index: 2;
+    z-index: 2;        
     right: 20px;
     top: 20px;
-    height: 50px;
+    height: 50px;                         /*meniu de inchidere navbar (x-urile)*/
     width: 50px;
     text-align: center;
     line-height: 50px;
@@ -124,6 +132,7 @@ button:hover::before {
       width: 40%;
       border-bottom: 2px solid rgb(34, 33, 33);
       transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      
   }
   .menu-btn:before{
     transform: translateY(-8px);
@@ -144,6 +153,7 @@ button:hover::before {
   /* animatie inchidere */
   #active:checked + .menu-btn span {
       transform: scaleX(0);
+
   }
   #active:checked + .menu-btn:before {
       transform: rotate(40deg);
@@ -152,6 +162,7 @@ button:hover::before {
   #active:checked + .menu-btn:after {
       transform: rotate(-45deg);
     border-color: rgb(60, 60, 60);  /* culori inchidere meniu */
+
   }
   .wrapper ul{
     position: absolute;
@@ -235,3 +246,4 @@ button:hover::before {
     transform: translatex(-100px); /*translatare continut navbar pe axa x*/
 }
   
+
