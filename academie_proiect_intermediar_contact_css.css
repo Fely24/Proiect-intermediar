@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Caveat";
+
+}
+body{
+    min-height: 100vh;
+    background: url('https://wallpaperaccess.com/full/1393237.jpg') no-repeat center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1{
+    position:fixed;
+    top:10%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+}
+.item{
+    display:flex ;
+    padding:10px;
+   margin-bottom: 24px;
+
+   
+}
+.contact_info{
+    width:25%;
+    color:rgb(63, 62, 61);
+    font-size: 20px;
+    font-style:italic;
+    font-weight: bolder;
+    padding-top: 1rem;
+    position: fixed;
+    left:80px;
+    top:150px;
+    border: 5px solid rgb(182, 178, 175);
+    border-radius: 2rem;
+    background-color: rgba(211, 211, 211, 0.826);
+    
+}
+.contact_form{
+  
+    padding-right: 1rem;
+}
+.textb{
+    width: calc(50% - 10px);
+    padding: 12px;
+    color: rgb(103, 104, 92);
+    font-size: 15px;
+    
+}
+
+textarea{
+    position: fixed;
+    right:20rem;
+    min-height: 200px;
+    max-height: 400px;
+    resize:vertical;
+    padding: 12px;
+    color: rgb(103, 104, 92);
+    font-size: 15px;
+    
+}
+
+/*buton*/
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: grab;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.3s ease;
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+  }
+  
+  .btn:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  }
+  
+  button:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  
+  button:focus {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  
+
+  @media (min-width: 601px) and (max-width: 975px) {
+
+    .contact_info{
+        width: 100%;
+        
+
+    }
+   
+}
+@media (max-width:600px){
+    .contact_info {
+        width:450px;
+        height: 90px;
+        font-size: 12px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: fixed;
+        top: 430px;
+        left:10px;
+    }
+    textarea{
+        
+    }
+}
