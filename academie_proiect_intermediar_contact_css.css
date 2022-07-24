@@ -104,26 +104,56 @@ textarea{
 
   @media (min-width: 601px) and (max-width: 975px) {
 
+    .contact-form{
+        position: fixed;
+        right:10px;
+        top:150px;
+    }
+    textarea{
+        position: fixed;
+        bottom:150px;
+        right:25px;
+    }
+    .btn{
+        position: fixed;
+        bottom:40px;
+        right:25px;
+    }
     .contact_info{
-        width: 100%;
-        
-
+        width:250px;
+        position: fixed;
+        left:20px;
     }
    
 }
 @media (max-width:600px){
     .contact_info {
-        width:450px;
-        height: 90px;
-        font-size: 12px;
-        padding: 10px;
-        display: flex;
-        flex-wrap: nowrap;
         position: fixed;
-        top: 430px;
-        left:10px;
+        top:90px;
+        left:20px;
+        padding: 15px;
+        width: 200px;;
+        height:300px;
+      
     }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right:10px;
+        width:15rem;
+ 
+    }
+
     textarea{
-        
+        width:450px;
+        height: 40px;
+        font-size: 15px;
+        padding: 15px;
+        display: flex;
+        flex-wrap:wrap;
+        position: fixed;
+        top: 400px;
+        left:10px;
     }
 }
